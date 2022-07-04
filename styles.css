@@ -30,9 +30,13 @@ body{
     border-radius: 10px;
     overflow: hidden;
 }
-.main-container img{
+.main-container .desktop{
+    display: none;
+}
+.main-container .mobile{
     width: 100%;
 }
+
 .main-container .perfume{
     padding-top: 12px;
     padding-left: 15px;
@@ -40,7 +44,7 @@ body{
     font-family: 'Montserrat';
 }
 .main-container h2{
-    padding-top: 12px;
+    padding-top: 10px;
     padding-left: 15px;
     font-family: 'Fraunces';
     color: var(--verydarkblue);
@@ -86,4 +90,35 @@ body{
     height: 15px;
     padding-right: 15px;
     background-repeat: no-repeat;
+}
+
+@media (min-width:1440px){
+    .main-container{
+        width: 35%;
+        height: 30rem;
+        display: flex;
+        /* justify-content: space-between; */
+    }
+    .main-container .main-container--container{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container .mobile{
+        display: none;
+    }
+    .main-container .desktop{
+        display: block;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 50%;
+        max-height: 100%;
+    }
+    .main-container .perfume{
+        margin-top: 10px;
+    }
+    .main-container button{
+        margin-top: 30px;
+    }
+
 }
